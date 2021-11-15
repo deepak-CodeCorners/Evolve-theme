@@ -14,28 +14,13 @@
       <meta name="keywords" content="">
       <meta name="description" content="">
       <meta name="author" content="">
-      <!-- bootstrap css -->
-      <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/bootstrap.min.css">
-      <!-- style css -->
-      <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/style.css">
-      <!-- Responsive-->
-      <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/responsive.css">
-      <!-- fevicon -->
-      <link rel="icon" href="<?php echo get_template_directory_uri(); ?>/images/fevicon.png" type="image/gif" />
-      <!-- Scrollbar Custom CSS -->
-      <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/jquery.mCustomScrollbar.min.css">
-      <!-- Tweaks for older IEs-->
-      <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
-      <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+      <?php get_header();?>
    </head>
    <!-- body -->
    <body class="main-layout">
       <!-- loader  -->
       <div class="loader_bg">
-         <div class="loader"><img src="<?php echo get_template_directory_uri(); ?>/<?php echo get_template_directory_uri(); ?>/images/loading.gif" alt="#" /></div>
+         <div class="loader"><img src="<?php echo get_template_directory_uri(); ?>/images/loading.gif" alt="#" /></div>
       </div>
       <!-- end loader -->
       <!-- header -->
@@ -61,7 +46,7 @@
                         <div class="collapse navbar-collapse" id="navbarsExample04">
                            <ul class="navbar-nav mr-auto">
                               <li class="nav-item">
-                                 <a class="nav-link" href="index.html">Contact Us</a>
+                                 <a class="nav-link" href="index.php">Contact Us</a>
                               </li>
                               <li class="nav-item">
                                  <a class="nav-link" href="#">Login </a>
@@ -274,45 +259,6 @@
          </div>
       </div>
       <!-- end people -->
-      <!--  footer -->
-      <footer>
-         <div class="footer">
-            <div class="container">
-               <div class="row">
-                  <div class="col-md-8 offset-md-2">
-                     <div class="cont">
-                        <h3> <span class="multi">Free Multipurpose </span> <br> Responsive Landing Page 2019</h3>
-                        <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is </p>
-                     </div>
-                     <form class="bottom_form">
-                        <input class="enter" placeholder="Enter your email" type="text" name="Enter your email">
-                        <button class="sub_btn">subscribe</button>
-                     </form>
-                  </div>
-               </div>
-            </div>
-            <div class="copyright">
-               <div class="container">
-                  <div class="row">
-                     <div class="col-md-12">
-                        <p>© 2019 All Rights Reserved. Design by <a href="https://html.design/"> Free Html Templates</a></p>
-                     </div>
-                  </div>
-               </div>
-            </div>
-         </div>
-      </footer>
-      <!-- end footer -->
-      <!-- Javascript files-->
-      <script src="<?php echo get_template_directory_uri(); ?>/js/jquery.min.js"></script>
-      <script src="<?php echo get_template_directory_uri(); ?>/js/popper.min.js"></script>
-      <script src="<?php echo get_template_directory_uri(); ?>/js/bootstrap.bundle.min.js"></script>
-      <script src="<?php echo get_template_directory_uri(); ?>/js/jquery-3.0.0.min.js"></script>
-      <script src="<?php echo get_template_directory_uri(); ?>/js/plugin.js"></script>
-      <!-- sidebar -->
-      <script src="<?php echo get_template_directory_uri(); ?>/js/jquery.mCustomScrollbar.concat.min.js"></script>
-      <script src="<?php echo get_template_directory_uri(); ?>/js/custom.js"></script>
-      <script src="https:cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
    </body>
 </html>
-
+<?php get_footer(); ?>

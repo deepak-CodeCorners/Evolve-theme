@@ -32,7 +32,7 @@
                      <div class="full">
                         <div class="center-desk">
                            <div class="logo">
-                              <a href="index.html"><img src="<?php echo get_template_directory_uri(); ?>/images/logo.png" alt="#" /></a>
+                              <a href="index.php"><img src="<?php echo get_template_directory_uri(); ?>/images/logo.png" alt="#" /></a>
                            </div>
                         </div>
                      </div>
@@ -45,7 +45,7 @@
                         <div class="collapse navbar-collapse" id="navbarsExample04">
                            <ul class="navbar-nav mr-auto">
                               <li class="nav-item">
-                                 <a class="nav-link" href="index.html">Contact Us</a>
+                                 <a class="nav-link" href="index.php">Contact Us</a>
                               </li>
                               <li class="nav-item">
                                  <a class="nav-link" href="#">Login </a>
