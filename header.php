@@ -43,9 +43,19 @@
                         <span class="navbar-toggler-icon"></span>
                         </button>
                         <div class="collapse navbar-collapse" id="navbarsExample04">
-                           <ul class="navbar-nav mr-auto">
+                        <?php 
+                        wp_nav_menu(
+                           array(
+                              'menu'=>'Primary menu',
+                              'container'=>'div',
+                              'menu_class'=>'navbar-nav mr-auto',
+                                 
+                           )
+                           );       
+                        ?>
+                           <!-- <ul class="navbar-nav mr-auto">
                               <li class="nav-item">
-                                 <a class="nav-link" href="index.php">Contact Us</a>
+                                 <a class="nav-link" href="index.html">Contact Us</a>
                               </li>
                               <li class="nav-item">
                                  <a class="nav-link" href="#">Login </a>
@@ -53,9 +63,10 @@
                               <li class="nav-item">
                                  <a class="nav-link" href="#">Register</a>
                               </li>
-                           </ul>
+                           </ul> -->
                            <div class="sign_btn"><a href="#"><i class="fa fa-search" aria-hidden="true"></i></a></div>
                         </div>
+                        
                      </nav>
                   </div>
                </div>

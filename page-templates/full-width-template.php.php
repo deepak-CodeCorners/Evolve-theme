@@ -4,10 +4,11 @@ get_header();
 ?>
 <?php
     echo get_field('about_us');
-    
-    wp_nav_menu( array(
-    'theme_location' => 'my-custom-menu',
-    'container_class' => 'custom-menu-class' ) );
+    $image = get_field('image');
+// echo "<pre>";
+// print_r($image); 
+if( !empty( $image ) ): ?>
+    <img src="<?php echo $image; ?>" />
+<?php endif; ?>
 
-?>
 <?php get_footer(); ?>

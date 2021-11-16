@@ -25,4 +25,17 @@ function custom_new_menu(){
     register_nav_menu('primary-menu',_('My Custom Menu'));
 }
 add_action('init','custom_new_menu');
+
+function add_menuclass($ulclass) {
+    return preg_replace('/<a/', '<a class="nav-link"', $ulclass, -1);
+    }
+    add_filter('wp_nav_menu','add_menuclass');
+
+    // function selected_class($classes,$item){
+    //     if(in_array('current_page_item',$classes)){
+    //         $classes='nav-item';
+    //     }
+    //     return $classes;
+    // }
+    // add_filter('nav_menu_css_class','selected_classes');
 ?>
