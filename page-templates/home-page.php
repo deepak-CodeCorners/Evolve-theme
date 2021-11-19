@@ -18,6 +18,9 @@ get_header();
     $fs_text = get_field('fs_text');
     $fs_features = get_field('fs_features');
     $fs_link = get_field('fs_link');
+
+   
+    
 ?>
    <!-- Banner-main -->
       <section class="banner_main">

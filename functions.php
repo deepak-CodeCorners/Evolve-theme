@@ -31,4 +31,25 @@ function add_menuclass($ulclass) {
     }
     add_filter('wp_nav_menu','add_menuclass');
 
+//creating gutenberg block
+    function acf_portfolio_item_block() {
+	
+        // check function exists
+        if( function_exists('acf_register_block') ) {
+            
+            // register a portfolio item block
+            acf_register_block(array(
+                'name'				=> 'portfolio-item',
+                'title'				=> __('Portfolio Item'),
+                'description'		=> __('A custom block for portfolio items.'),
+                'render_template'	=> 'template-parts/blocks/portfolio-item/block-portfolio-item.php',
+                'category'			=> 'layout',
+                'icon'				=> 'excerpt-view',
+                'keywords'			=> array( 'portfolio' ),
+            ));
+        }
+    }
+    
+    add_action('acf/init', 'acf_portfolio_item_block');
+
 ?>

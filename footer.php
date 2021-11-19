@@ -2,14 +2,14 @@
       <footer>
          <div class="footer ">
             <div class="container">
-               <div class="row">
+               <div class="row ">
                   <div class="col-md-8 offset-md-2 bottom_form">
                      <?php 
                         echo do_shortcode('[contact-form-7 id="268" title="Footer Form"]');
                      ?>
                   </div>
                </div>
-            </div>
+            
             <div class="copyright">
                <div class="container">
                   <div class="row">
