@@ -98,10 +98,12 @@ get_header();
                </div>
             </div>
             <div class="row">
-               <div class="col-md-4">
-                  <?php 
-                  echo do_shortcode ('[contact-form-7 id="242" title="Contact-Form"]');
-                  ?>
+               <div class="col-md-4 main_form">
+                  <div class="row">
+                     <?php 
+                     echo do_shortcode ('[contact-form-7 id="239" title="Contact form 1"]');
+                     ?>
+                  </div>
                </div>
                <div class="col-md-8">
                   <div class="back_img">

@@ -48,26 +48,12 @@
                            array(
                               'menu'=>'Primary menu',
                               'container'=>'div',
-                              'menu_class'=>'navbar-nav mr-auto',
-                                 
+                              'menu_class'=>'navbar-nav mr-auto',      
                            )
                            );       
                         ?>
-                           <!-- <ul class="navbar-nav mr-auto">
-                              <li class="nav-item">
-                                 <a class="nav-link" href="index.html">Contact Us</a>
-                              </li>
-                              <li class="nav-item">
-                                 <a class="nav-link" href="#">Login </a>
-                              </li>
-                              <li class="nav-item">
-                                 <a class="nav-link" href="#">Register</a>
-                              </li>
-                           </ul> -->
                            <div class="sign_btn"><a href="#"><i class="fa fa-search" aria-hidden="true"></i></a></div>
                         </div>
-                        
-                     </nav>
                   </div>
                </div>
             </div>
