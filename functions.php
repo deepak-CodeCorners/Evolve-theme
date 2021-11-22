@@ -32,24 +32,31 @@ function add_menuclass($ulclass) {
     add_filter('wp_nav_menu','add_menuclass');
 
 //creating gutenberg block
-    function acf_portfolio_item_block() {
-	
-        // check function exists
-        if( function_exists('acf_register_block') ) {
-            
-            // register a portfolio item block
-            acf_register_block(array(
-                'name'				=> 'portfolio-item',
-                'title'				=> __('Portfolio Item'),
-                'description'		=> __('A custom block for portfolio items.'),
-                'render_template'	=> 'template-parts/blocks/portfolio-item/block-portfolio-item.php',
-                'category'			=> 'layout',
-                'icon'				=> 'excerpt-view',
-                'keywords'			=> array( 'portfolio' ),
-            ));
-        }
-    }
-    
-    add_action('acf/init', 'acf_portfolio_item_block');
-
+function custom_blocks( $categories, $post ) {
+    return array_merge(
+        $categories,
+        array(
+            array(
+                'slug' => 'home-blocks',
+                'title' => __( 'Home Blocks', 'home-blocks' ),
+            ),
+            array(
+                'slug' => 'inner-pages-blocks',
+                'title' => __( 'Inner Pages Blocks', 'inner-pages-blocks' ),
+            ),
+            )           
+     );
+ }
+ add_filter( 'block_categories', 'custom_blocks', 10, 2);
+ 
+ function register_acf_block_types() {
+ 
+    include('includes/registered-blocks/home-blocks.php');
+    include('includes/registered-blocks/inner-pages-blocks.php'); 
+ }
+ // Check if function exists and hook into setup.
+ if( function_exists('acf_register_block_type') ) {
+     add_action('acf/init', 'register_acf_block_types');
+ }
+ 
 ?>
